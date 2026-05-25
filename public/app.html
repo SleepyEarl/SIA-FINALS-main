@@ -13,53 +13,50 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f8fafc;
+            background-color: #0f172a;
             min-height: 100vh;
             padding: 40px 20px;
-            color: #1e293b;
+            color: #f1f5f9;
             line-height: 1.5;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
         }
 
         .header {
-            border-bottom: 1px solid #e2e8f0;
-            padding: 30px 40px;
+            padding: 20px 0 40px 0;
+            text-align: left;
         }
 
         .header h1 {
-            font-size: 1.8em;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 4px;
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.03em;
+            margin-bottom: 6px;
         }
 
         .header p {
-            color: #64748b;
-            font-size: 0.95em;
+            color: #94a3b8;
+            font-size: 1em;
+            font-weight: 400;
         }
 
         .main-content {
-            padding: 40px;
-        }
-
-        .section {
-            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
         }
 
         .section h2 {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e2e8f0;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #94a3b8;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
 
         .form-group {
@@ -68,45 +65,48 @@
 
         label {
             display: block;
-            margin-bottom: 6px;
-            font-size: 0.85em;
+            margin-bottom: 8px;
+            font-size: 0.8em;
             font-weight: 600;
-            color: #334155;
+            color: #64748b;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
         input, select, textarea {
             width: 100%;
-            padding: 10px 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
+            padding: 12px 16px;
+            border: 1px solid #334155;
+            border-radius: 8px;
             font-size: 0.95em;
-            color: #1e293b;
-            background-color: #ffffff;
+            color: #ffffff;
+            background-color: #1e293b;
             font-family: inherit;
-            transition: border-color 0.15s ease;
+            transition: all 0.2s ease;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #2563eb;
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 1px #38bdf8;
+            background-color: #0f172a;
         }
 
         button {
-            background-color: #1e293b;
-            color: #ffffff;
-            padding: 10px 24px;
-            border: 1px solid #1e293b;
-            border-radius: 6px;
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
             font-size: 0.95em;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.15s ease;
+            transition: all 0.2s ease;
         }
 
         button:hover {
-            background-color: #0f172a;
+            background-color: #0ea5e9;
+            transform: translateY(-1px);
         }
 
         .form-row {
@@ -118,31 +118,35 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
-            margin-bottom: 30px;
         }
 
         .stat-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 20px;
-            border-radius: 6px;
+            background: #1e293b;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: border-color 0.2s;
+        }
+
+        .stat-card:hover {
+            border-color: #475569;
         }
 
         .stat-label {
-            font-size: 0.8em;
+            font-size: 0.75em;
             font-weight: 600;
             color: #64748b;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .stat-value {
-            font-size: 2em;
-            font-weight: 700;
-            color: #0f172a;
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #ffffff;
         }
 
         .task-list {
@@ -150,24 +154,31 @@
         }
 
         .task-item {
-            background: #ffffff;
-            padding: 16px 20px;
-            border-radius: 6px;
-            margin-bottom: 12px;
-            border: 1px solid #e2e8f0;
+            background: #1e293b;
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            border: 1px solid #334155;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .task-item:hover {
+            border-color: #475569;
+            transform: scale(1.005);
         }
 
         .task-item.completed {
-            background: #f8fafc;
-            border-color: #e2e8f0;
+            opacity: 0.5;
+            background: #0f172a;
+            border-color: #1e293b;
         }
 
         .task-item.completed .task-text {
-            color: #94a3b8;
+            color: #64748b;
             text-decoration: line-through;
         }
 
@@ -176,9 +187,10 @@
         }
 
         .task-text {
-            font-weight: 500;
-            margin-bottom: 6px;
-            color: #0f172a;
+            font-weight: 600;
+            font-size: 1.05em;
+            margin-bottom: 8px;
+            color: #ffffff;
         }
 
         .task-meta {
@@ -190,35 +202,32 @@
 
         .badge {
             display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75em;
-            font-weight: 600;
-            border: 1px solid transparent;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
         }
 
         .badge-priority {
-            background: #fef2f2;
-            color: #991b1b;
-            border-color: #fee2e2;
+            background: rgba(239, 68, 68, 0.15);
+            color: #fca5a5;
         }
 
         .badge-priority.medium {
-            background: #fffbeb;
-            color: #92400e;
-            border-color: #fef3c7;
+            background: rgba(245, 158, 11, 0.15);
+            color: #fde68a;
         }
 
         .badge-priority.low {
-            background: #f0fdf4;
-            color: #166534;
-            border-color: #dcfce7;
+            background: rgba(16, 185, 129, 0.15);
+            color: #a7f3d0;
         }
 
         .badge-category {
-            background: #f1f5f9;
-            color: #475569;
-            border-color: #e2e8f0;
+            background: #334155;
+            color: #cbd5e1;
         }
 
         .task-actions {
@@ -227,58 +236,60 @@
         }
 
         .btn-small {
-            padding: 6px 12px;
+            padding: 8px 14px;
             font-size: 0.85em;
-            background: #ffffff;
-            color: #334155;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
+            background: #334155;
+            color: #f1f5f9;
+            border: none;
+            border-radius: 6px;
             cursor: pointer;
+            font-weight: 500;
             transition: all 0.15s;
         }
 
         .btn-small:hover {
-            background: #f8fafc;
-            border-color: #94a3b8;
+            background: #475569;
+            color: #ffffff;
         }
 
         .btn-danger {
-            color: #b91c1c;
-            border-color: #fca5a5;
-            background: #ffffff;
+            color: #fca5a5;
+            background: rgba(239, 68, 68, 0.1);
         }
 
         .btn-danger:hover {
-            background: #fef2f2;
-            border-color: #ef4444;
+            background: #ef4444;
+            color: #ffffff;
         }
 
         .notification {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: #ffffff;
+            background: #1e293b;
+            color: #ffffff;
             padding: 16px 24px;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
             z-index: 1000;
+            font-weight: 500;
         }
 
         .notification.success {
-            border-left: 4px solid #166534;
+            border-left: 4px solid #10b981;
         }
 
         .notification.error {
-            border-left: 4px solid #b91c1c;
+            border-left: 4px solid #ef4444;
         }
 
         .loading {
             display: inline-block;
             width: 16px;
             height: 16px;
-            border: 2px solid #e2e8f0;
-            border-top: 2px solid #1e293b;
+            border: 2px solid #334155;
+            border-top: 2px solid #38bdf8;
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-left: 10px;
@@ -291,10 +302,11 @@
 
         .empty-state {
             text-align: center;
-            padding: 40px;
+            padding: 48px;
             color: #64748b;
-            border: 1px dashed #cbd5e1;
-            border-radius: 6px;
+            border: 2px dashed #334155;
+            border-radius: 12px;
+            background: #1e293b;
         }
 
         @media (max-width: 768px) {
@@ -304,6 +316,7 @@
             .task-item {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 16px;
             }
             .task-actions {
                 width: 100%;
@@ -455,7 +468,6 @@
                         body: JSON.stringify({ name })
                     });
                 } catch (error) {
-                    // Ignore duplicate errors, just continue
                 }
             }
         }
