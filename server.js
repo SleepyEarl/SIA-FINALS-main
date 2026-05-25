@@ -17,10 +17,7 @@ const statsRoutes = require('./routes/stats');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Initialize database
-initializeDatabase().catch((error) => {
-    console.error('Failed to initialize database:', error);
-});
+
 
 // Middleware
 app.use(cors());
@@ -46,7 +43,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/stats', statsRoutes);
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'app.html'));
 });
 
 app.use((req, res) => {
