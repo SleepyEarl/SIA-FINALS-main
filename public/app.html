@@ -375,7 +375,9 @@
   <div id="notif-wrap"></div>
 
   <script>
-    const BASE = 'https://tassssapi-1.onrender.com/api';
+    const BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:5000/api'
+  : 'https://taskapim.onrender.com/api'; // 👈 Put your real Render backend URL here
     let tasks = [], cats = [], editId = null, activeTimer = null, timerIv = null;
 
     const $ = id => document.getElementById(id);
